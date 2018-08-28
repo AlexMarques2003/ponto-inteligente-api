@@ -62,6 +62,10 @@ public class LancamentoController {
 	 * 
 	 * @param funcionarioId
 	 * @return ResponseEntity<Response<LancamentoDto>>
+	 * 
+	 * exemplo utilizando ordenação ascendente dos registros do funcionario de id 2 - get http://localhost:8080/api/lancamentos/funcionario/2?dir=ASC
+	 * exemplo utilizando ordenação ascendente dos registros do funcionario de id 2 que estão na pagina 1 lembando que a paginação começa em zero - get http://localhost:8080/api/lancamentos/funcionario/2?dir=ASC&pag=1 
+	 * 
 	 */
 	@GetMapping(value = "/funcionario/{funcionarioId}")
 	public ResponseEntity<Response<Page<LancamentoDto>>> listarPorFuncionarioId(
@@ -162,6 +166,8 @@ public class LancamentoController {
 	 * 
 	 * @param id
 	 * @return ResponseEntity<Response<Lancamento>>
+	 * 
+	 * Exemplo de chamada deletando o registro 2 - delete http://localhost:8080/api/lancamentos/2
 	 */
 	@DeleteMapping(value = "/{id}")
 	@PreAuthorize("hasAnyRole('ADMIN')")
