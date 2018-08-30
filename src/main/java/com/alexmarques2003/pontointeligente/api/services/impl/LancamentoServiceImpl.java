@@ -22,7 +22,7 @@ public class LancamentoServiceImpl implements LancamentoService {
 
 	@Autowired
 	private LancamentoRepository lancamentoRepository;
-
+	
 	public Page<Lancamento> buscarPorFuncionarioId(Long funcionarioId, PageRequest pageRequest) {
 		log.info("Buscando lançamentos para o funcionário ID {}", funcionarioId);
 		return this.lancamentoRepository.findByFuncionarioId(funcionarioId, pageRequest);
@@ -44,5 +44,4 @@ public class LancamentoServiceImpl implements LancamentoService {
 		log.info("Removendo o lançamento ID {}", id);
 		this.lancamentoRepository.delete(id);
 	}
-
 }
