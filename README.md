@@ -3,8 +3,7 @@
 Api do sistema de ponto inteligente com Java e Spring Boot
 
 Tecnologias utilizadas:
- 
-- Spring data
+ - Spring data
 - Spring Jpa
 - Spring Security
 - Token com Jwt
